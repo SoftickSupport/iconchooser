@@ -37,7 +37,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
-
+/*
 publishing {
     publications {
         release(MavenPublication) {
@@ -45,9 +45,19 @@ publishing {
             artifactId = 'iconchooser'
             version = '1.1.1'
 
-            afterEvaluate {
-                release
-            }
+            afterEvaluate {release}
+        }
+    }
+}
+*/
+
+publishing {
+    publications {
+        maven(MavenPublication)
+        {
+            groupId = 'com.softick'
+            artifactId = 'iconchooser'
+            version = '1.1.1'
         }
     }
 }
